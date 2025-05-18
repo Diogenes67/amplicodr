@@ -14,31 +14,35 @@ from openai import OpenAI
 
 # Page configuration (must be the first Streamlit command)
 st.set_page_config(
-    page_title="AmpliCodr – ED Code Classifier",
-    page_icon="💡",
+st.markdown('<img src="amplar_logo.png" style="height:80px;">', unsafe_allow_html=True)
+
+    page_title="AmpliCodr",
+    page_icon="🏥",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-
-# Load custom styles
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 local_css("ekoder_styles.css")
 
-# Load and show logo
-from PIL import Image
-logo = Image.open("amplar_logo.png")
+logo = Image.open("logo.png")
 st.image(logo, width=150)
 
-# Title and description
-st.markdown("<h1 style='color:#444;font-size:48px;'>AmpliCodr</h1>", unsafe_allow_html=True)
+# Title and description  
+mpliC    page_title="EKoder – ED Code Classifier",
+    page_title="EKoder – ED Code Classifier",
+    page_title="EKoder – ED Code Classifier",
+    page_title="EKoder – ED Code Classifier",
+    page_title="EKoder – ED Code Classifier",
+    page_title="EKoder – ED Code Classifier",
+    page_title="EKoder – ED Code Classifier",
+st.markdown("<h1 style='color:#004080;font-size:48px;'></h1>", unsafe_allow_html=True)
 
 st.markdown("""
-<div style='font-size:18px; color:#444;'>
-
-<b>AmpliCodr</b> is a clinical coding exploration tool designed for use in Australian Emergency Departments.<br><br>
+<div style='font-size:18px; color:#333;'>
+<b>EKoder</b> is a clinical coding exploration tool designed for use in Australian Emergency Departments.<br><br>
 
 This tool is intended for <b>research and educational purposes only</b>, to explore the potential use of AI in clinical coding workflows.  
 It uses GPT‑4o to analyse free-text ED case notes and suggest <b>up to four ICD-10-AM principal diagnosis codes</b> that could plausibly reflect the presentation.  
@@ -46,19 +50,18 @@ These are ranked from most to least likely, with a short explanation provided fo
 
 The <b>Complexity</b> column indicates the relative resource intensity typically associated with each code in an ED setting, based on historical funding weights.<br><br>
 
-<b>Note:</b> In practice, ED funding is influenced by additional factors including patient age, triage category, comorbidities, and procedures performed.  
-The ED code alone does <b>not</b> determine the total funding.<br><br>
+<b>Note:</b> In practice, ED funding is affected by a range of factors including patient complexity, triage category, and age.  
+The ED code alone does not determine the total funding amount.<br><br>
 
 <b>How it works:</b><br>
-AmpliCodr uses semantic similarity (via embedding-based search) to identify the most relevant codes from a shortlist of ED diagnoses.  
-It then passes those to GPT‑4o for reasoning and ranking based on your case note.<br>
+EKoder uses semantic similarity (via embedding-based search) to identify the most relevant codes from a shortlist of common ED diagnoses.  
+It then passes those to GPT‑4o for reasoning and ranking based on your case note.  
 No sidebar configuration is required — just paste or upload a case note.<br><br>
 
 ⚠️ <b>Please ensure all case notes are de-identified before uploading or pasting into this tool.</b><br>
-Use of AmpliCodr should be reviewed by your institution’s ICT, privacy, and research governance teams before operational use.<br><br>
+Use of EKoder should be reviewed by your institution’s ICT, privacy, and research governance teams before integration into clinical or operational environments.<br><br>
 
-This tool does <b>not provide medical advice</b> or guaranteed coding accuracy, and is <b>not intended for patient care or documentation</b>.
-
+This tool does <b>not provide medical advice</b> or guaranteed coding accuracy and is <b>not intended for patient care or formal documentation</b>.
 </div>
 """, unsafe_allow_html=True)
 
