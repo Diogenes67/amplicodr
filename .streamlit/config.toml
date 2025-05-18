@@ -1,6 +1,7 @@
 [theme]
-primaryColor="#46a080"
-backgroundColor="#e4f3e8"
-secondaryBackgroundColor="#ffffff"
-textColor="#1b1c1e"
+primaryColor = "#007AC1"           # Amplar blue (used in "Our health solutions")
+backgroundColor = "#f5f7f8"        # Very light grey (background tone)
+secondaryBackgroundColor = "#ffffff"  # Cards or sidebar
+textColor = "#4A4A4A"              # Dark warm grey (used for body text)
+font = "sans serif"
 
